@@ -14,6 +14,9 @@ import jp.co.sss.lms.entity.TStudentAttendance;
  * 
  * @author 東京ITスクール
  */
+/**
+ * 
+ */
 @Mapper
 public interface TStudentAttendanceMapper {
 
@@ -64,5 +67,12 @@ public interface TStudentAttendanceMapper {
 	 * @return 更新結果
 	 */
 	Boolean update(TStudentAttendance tStudentAttendance);
+	
+	
+	/**タスク２５
+	 * 勤怠情報（受講生入力）勤怠未入力チェック
+	 * @return nullの数
+	 */
+	Integer tyeck();
 
 }

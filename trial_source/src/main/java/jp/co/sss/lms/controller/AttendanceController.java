@@ -71,7 +71,12 @@ public class AttendanceController {
 		List<AttendanceManagementDto> attendanceManagementDtoList = studentAttendanceService
 				.getAttendanceManagement(loginUserDto.getCourseId(), loginUserDto.getLmsUserId());
 		model.addAttribute("attendanceManagementDtoList", attendanceManagementDtoList);
-
+		// タスク２５
+//		Integer aiueo = (Integer) studentAttendanceService.tyeck();
+//		if(aiueo >= 1) {
+//			model.addAttribute("error","過去日の勤怠に未入力があります。");
+//		}
+//
 		return "attendance/detail";
 	}
 

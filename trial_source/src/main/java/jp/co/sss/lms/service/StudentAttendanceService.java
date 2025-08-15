@@ -72,7 +72,11 @@ public class StudentAttendanceService {
 
 		return attendanceManagementDtoList;
 	}
-
+	//タスク２５
+//	public Integer tyeck() {
+//		Integer tyeck = tStudentAttendanceMapper.tyeck();
+//	}
+	
 	/**
 	 * 出退勤更新前のチェック
 	 * 
@@ -93,6 +97,7 @@ public class StudentAttendanceService {
 		TStudentAttendance tStudentAttendance = tStudentAttendanceMapper
 				.findByLmsUserIdAndTrainingDate(loginUserDto.getLmsUserId(), trainingDate,
 						Constants.DB_FLG_FALSE);
+		
 		switch (attendanceType) {
 		case Constants.CODE_VAL_ATWORK:
 			if (tStudentAttendance != null
@@ -102,6 +107,14 @@ public class StudentAttendanceService {
 			}
 			break;
 		case Constants.CODE_VAL_LEAVING:
+			
+			//タスク２５
+//			if (tStudentAttendance != null
+//					&& !tStudentAttendance.getTrainingStartTime().equals("")) {
+//				// 未入力の勤怠があります。時刻を入力するか、欠席の場合はチェックを入れてください。
+//				return messageUtil.getMessage(Constants.VALID_KEY_ATTENDANCE_PUNCHALREADYEXISTS);
+//			}
+			
 			if (tStudentAttendance == null
 					|| tStudentAttendance.getTrainingStartTime().equals("")) {
 				// 出勤情報がないため退勤情報を入力出来ません。
